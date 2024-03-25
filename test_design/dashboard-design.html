@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        body {
+      font-family: "Montserrat", sans-serif;
+      background-color: #6C8EAD;
+    }
+    .active-slot {
+        border-radius: 38px;
+        background-color: #1A1D1A;
+    }
+    .nav-slot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 71px;
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .center-nav {
+        background-color: rgba(240, 239, 244, 0.3);
+        border-radius: 38px;
+        height: 75px;
+        width: 530px;
+        align-items: center;
+    }
+    .logo-nav {
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .profile-nav {
+        background-color: rgba(240, 239, 244, 0.3);
+        border-radius: 38px;
+        height: 75px;
+        width: auto;
+        align-items: center;
+    }
+    .profile-photo-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 71px;
+        width: 71px;
+        border-radius: 38px;
+        background-color: #1A1D1A;
+        margin-left: 0px;
+    }
+    .profile-settings-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 71px;
+        width: 71px;
+        border-radius: 38px;
+        background-color: #1A1D1A;
+        margin-right: 0px;
+    }
+    .profile-data-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 71px;
+        width: 175px;
+        border-radius: 50px;
+    }
+    .search-line {
+        display: block;
+        background-color: #DBDADE;
+        height: 50px;
+        border-radius: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .wrap-columns-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    .main-title-section {
+        height: 618px;
+        width: 845px;
+        border-radius: 38px;
+        margin-right: 25px;
+    }
+
+    .my-projects-section {
+        height: 604px;
+        width: 410px;
+        background-color: chartreuse;
+        border-radius: 38px;
+    }
+
+    .main-title-buttons {
+        height: 71px;
+        width: 845px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 21px;
+    }
+    
+    .main-title-checkbox-btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-title-service-btn {
+        width: 274px;
+        height: 61px;
+        border: 3px solid #DBDADE;
+        border-radius: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #DBDADE;
+        margin-right: 5px;
+    }
+
+    .main-title-samples-btn {
+        width: 204px;
+        height: 61px;
+        border: 3px solid #DBDADE;
+        border-radius: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: #DBDADE;
+    }
+
+    .main-title-notification-btn {
+        width: 71px;
+        height: 71px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+    }
+
+    .main-title-settings-btn {
+        width: 71px;
+        height: 71px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-title-active-btn {
+        border: none;
+        background-color: #1A1D1A;
+    }
+
+
+
+    </style>
+
+    <style>  
+    .container-table {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: #12130F;
+      border-radius: 38px;
+      padding-bottom: 40px;
+    }
+    
+    .btn:hover {
+      background-color: #5f6061;
+      border-radius: 5px;
+    }
+    
+    .responsive-table {
+        padding-left: 0rem;
+      li {
+        border-radius: 38px;
+        padding: 10px 30px;
+        height: 74px;
+        width: 805px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        color: azure;
+        text-align: center;
+        align-items: center;
+      }
+      .table-header {
+        padding-top: 20px;
+        padding-bottom: 0rem;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        font-weight: bold;
+      }
+      .table-row {
+        background-color: #323435;
+        box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+      }
+      .table-row:hover {
+        background-color: #404649;
+        box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+      }
+      .col-1 {
+        flex-basis: 10%;
+      }
+      .col-2 {
+        flex-basis: 30%;
+      }
+      .col-3 {
+        flex-basis: 25%;
+      }
+      .col-4 {
+        flex-basis: 25%;
+      }
+      .col-5 {
+        flex-basis: 5%;
+      }
+      .col-6 {
+        flex-basis: 5%;
+      }
+      
+      /* @media all and (max-width: 767px) {
+        .table-header {
+          display: none;
+        }
+        li {
+          display: block;
+        }
+        .col {
+          
+          flex-basis: 100%;
+          
+        }
+        .col {
+          display: flex;
+          padding: 10px 0;
+          &:before {
+            color: #6C7A89;
+            padding-right: 10px;
+            content: attr(data-label);
+            flex-basis: 50%;
+            text-align: right;
+          }
+        }
+      } */
+    }
+    </style>
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none logo-nav text-light">
+              SmartLab
+            </a>
+          </div>
+    
+          <ul class="center-nav nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li class="nav-slot" style="margin-right: 30px; margin-left: 30px;"><a href="#" class="nav-link px-2 link-light">Проекты</a></li>
+            <li class="nav-slot" style="margin-right: 30px;"><a href="#" class="nav-link px-2 link-light">Реагенты</a></li>
+            <li class="nav-slot" style="margin-right: 30px;"><a href="#" class="nav-link px-2 link-light">Оборудование</a></li>
+            <li class="nav-slot active-slot" style="height: 71px; width: 71px;"><a href="#" class="nav-link px-2">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 10L17.5 3.42501C16.8125 2.81006 15.9224 2.47009 15 2.47009C14.0776 2.47009 13.1875 2.81006 12.5 3.42501L5 10C4.60296 10.3551 4.28612 10.7907 4.07059 11.2778C3.85505 11.7649 3.74576 12.2924 3.75 12.825V23.75C3.75 24.7446 4.14508 25.6984 4.84835 26.4017C5.55161 27.1049 6.50543 27.5 7.5 27.5H22.5C23.4946 27.5 24.4484 27.1049 25.1516 26.4017C25.8549 25.6984 26.25 24.7446 26.25 23.75V12.8125C26.2525 12.282 26.1423 11.7569 25.9268 11.2721C25.7114 10.7873 25.3955 10.3537 25 10ZM17.5 25H12.5V18.75C12.5 18.4185 12.6317 18.1005 12.8661 17.8661C13.1005 17.6317 13.4185 17.5 13.75 17.5H16.25C16.5815 17.5 16.8995 17.6317 17.1339 17.8661C17.3683 18.1005 17.5 18.4185 17.5 18.75V25ZM23.75 23.75C23.75 24.0815 23.6183 24.3995 23.3839 24.6339C23.1495 24.8683 22.8315 25 22.5 25H20V18.75C20 17.7554 19.6049 16.8016 18.9016 16.0984C18.1984 15.3951 17.2446 15 16.25 15H13.75C12.7554 15 11.8016 15.3951 11.0983 16.0984C10.3951 16.8016 10 17.7554 10 18.75V25H7.5C7.16848 25 6.85053 24.8683 6.61611 24.6339C6.38169 24.3995 6.25 24.0815 6.25 23.75V12.8125C6.25022 12.635 6.28824 12.4596 6.36152 12.298C6.4348 12.1363 6.54166 11.9921 6.675 11.875L14.175 5.31251C14.4031 5.11211 14.6964 5.00159 15 5.00159C15.3036 5.00159 15.5969 5.11211 15.825 5.31251L23.325 11.875C23.4583 11.9921 23.5652 12.1363 23.6385 12.298C23.7118 12.4596 23.7498 12.635 23.75 12.8125V23.75Z" fill="#F0EFF4"/>
+                </svg>
+                </a></li>
+          </ul>
+    
+          <div class="col-md-3 text-end" style="margin-right: 0;">
+            <ul class="profile-nav nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li class="profile-photo-nav"><a href="#" class="nav-link px-2 link-light"></a></li>
+                <li class="profile-data-nav"><a href="#" class="nav-link px-2 link-light text-start">Имя Фамилия<br>Должность</a></li>
+                <li class="profile-settings-nav"><a href="#" class="nav-link px-2 link-light"></a></li>
+              </ul>
+          </div>
+        </header>
+      </div>
+
+      <div class="container">
+        <div class="search-line">Поиск</div>
+      </div>
+
+      <div class="container wrap-columns-main">
+        <div class="main-title-section">
+            <div>
+                <div class="main-title-buttons">
+                    <div class="main-title-checkbox-btns">
+                        <div class="main-title-service-btn">
+                            Мои исследования
+                        </div>
+                        <div class="main-title-samples-btn main-title-active-btn">
+                            Мои образцы
+                        </div>
+                    </div>
+                    <div class="main-title-checkbox-btns">
+                        <div class="main-title-notification-btn">
+                            <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="71" height="71" rx="35.5" fill="#F0EFF4" fill-opacity="0.3"/>
+                                <path d="M26.0496 43.4375H38.693C38.6052 45.1325 37.5129 46.2125 36.0064 46.2125C34.4871 46.2125 33.4071 45.1325 33.3064 43.4375H31.3479C31.4486 45.8482 33.3445 47.9697 36.0064 47.9697C38.6555 47.9697 40.5514 45.8482 40.6521 43.4375H45.9504C47.1434 43.4375 47.8468 42.8225 47.8468 41.9182C47.8468 40.6625 46.5782 39.5327 45.4859 38.4152C44.6571 37.549 44.4311 35.7661 44.3432 34.3223C44.243 29.375 42.975 26.1731 39.6225 24.9677C39.2079 23.3359 37.852 22.0298 36.0064 22.0298C34.1475 22.0298 32.8045 23.3359 32.3775 24.9677C29.0379 26.1731 27.757 29.375 27.6691 34.3218C27.5689 35.7661 27.3552 37.549 26.5141 38.4152C25.4341 39.5327 24.1537 40.6625 24.1537 41.9188C24.1537 42.8225 24.8695 43.4375 26.0496 43.4375ZM26.602 41.5411V41.3911C26.828 41.0145 27.5689 40.2859 28.2343 39.545C29.1257 38.5406 29.5521 36.9334 29.6657 34.4729C29.7659 28.9979 31.3982 27.2407 33.5577 26.6632C33.8716 26.5877 34.035 26.4243 34.0473 26.1104C34.0977 24.7925 34.8386 23.8754 36.0064 23.8754C37.1614 23.8754 37.9146 24.792 37.9527 26.1104C37.965 26.4243 38.1407 26.5872 38.4546 26.6627C40.6018 27.2407 42.2341 28.9984 42.3471 34.4729C42.4473 36.9334 42.8743 38.5406 43.7786 39.545C44.4311 40.2859 45.1843 41.0145 45.4104 41.3911V41.5411H26.602Z" fill="#F0EFF4"/>
+                                </svg>                                
+                        </div>
+                        <div class="main-title-settings-btn">
+                            <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="71" height="71" rx="35.5" fill="#F0EFF4" fill-opacity="0.3"/>
+                                <path d="M47 35.76V34.23L48.92 32.55C49.2739 32.238 49.5062 31.811 49.5757 31.3444C49.6452 30.8778 49.5476 30.4016 49.3 30L46.94 26C46.7646 25.6962 46.5125 25.444 46.2088 25.2684C45.9052 25.0929 45.5607 25.0003 45.21 25C44.9926 24.9983 44.7765 25.0321 44.57 25.1L42.14 25.92C41.7205 25.6412 41.2828 25.3906 40.83 25.17L40.32 22.65C40.2285 22.1896 39.9781 21.776 39.6124 21.4817C39.2468 21.1873 38.7893 21.031 38.32 21.04H33.64C33.1707 21.031 32.7132 21.1873 32.3475 21.4817C31.9819 21.776 31.7314 22.1896 31.64 22.65L31.13 25.17C30.6739 25.3906 30.233 25.6411 29.81 25.92L27.43 25.06C27.2213 25.0056 27.0052 24.9853 26.79 25C26.4393 25.0003 26.0948 25.0929 25.7912 25.2684C25.4875 25.444 25.2354 25.6962 25.06 26L22.7 30C22.4666 30.401 22.3798 30.8706 22.4546 31.3285C22.5294 31.7864 22.7611 32.2041 23.11 32.51L25 34.24V35.77L23.11 37.45C22.7513 37.758 22.5132 38.1831 22.4382 38.6499C22.3631 39.1167 22.4559 39.5951 22.7 40L25.06 44C25.2354 44.3037 25.4875 44.556 25.7912 44.7315C26.0948 44.907 26.4393 44.9996 26.79 45C27.0073 45.0016 27.2235 44.9679 27.43 44.9L29.86 44.08C30.2795 44.3588 30.7172 44.6093 31.17 44.83L31.68 47.35C31.7714 47.8104 32.0219 48.2239 32.3875 48.5183C32.7532 48.8126 33.2107 48.969 33.68 48.96H38.4C38.8693 48.969 39.3268 48.8126 39.6924 48.5183C40.0581 48.2239 40.3085 47.8104 40.4 47.35L40.91 44.83C41.3661 44.6094 41.807 44.3588 42.23 44.08L44.65 44.9C44.8565 44.9679 45.0726 45.0016 45.29 45C45.6407 44.9996 45.9852 44.907 46.2888 44.7315C46.5925 44.556 46.8446 44.3037 47.02 44L49.3 40C49.5334 39.599 49.6201 39.1293 49.5453 38.6714C49.4705 38.2135 49.2389 37.7959 48.89 37.49L47 35.76ZM45.21 43L41.78 41.84C40.9771 42.5201 40.0594 43.0517 39.07 43.41L38.36 47H33.64L32.93 43.45C31.9484 43.0816 31.0357 42.5508 30.23 41.88L26.79 43L24.43 39L27.15 36.6C26.9651 35.5648 26.9651 34.5051 27.15 33.47L24.43 31L26.79 27L30.22 28.16C31.0229 27.4799 31.9406 26.9482 32.93 26.59L33.64 23H38.36L39.07 26.55C40.0516 26.9184 40.9643 27.4491 41.77 28.12L45.21 27L47.57 31L44.85 33.4C45.0349 34.4351 45.0349 35.4948 44.85 36.53L47.57 39L45.21 43Z" fill="#F0EFF4"/>
+                                <path d="M36 41C34.8133 41 33.6533 40.6481 32.6666 39.9888C31.6799 39.3295 30.9109 38.3925 30.4567 37.2961C30.0026 36.1997 29.8838 34.9933 30.1153 33.8295C30.3468 32.6656 30.9182 31.5965 31.7574 30.7574C32.5965 29.9182 33.6656 29.3468 34.8295 29.1153C35.9933 28.8838 37.1997 29.0026 38.2961 29.4567C39.3925 29.9109 40.3295 30.6799 40.9888 31.6666C41.6481 32.6533 42 33.8133 42 35C42.008 35.7902 41.8583 36.574 41.5596 37.3056C41.2609 38.0371 40.8193 38.7018 40.2605 39.2605C39.7018 39.8193 39.0371 40.2609 38.3056 40.5596C37.574 40.8583 36.7902 41.008 36 41ZM36 31C35.4713 30.9877 34.9457 31.0827 34.4548 31.2794C33.9639 31.4761 33.5181 31.7702 33.1442 32.1442C32.7702 32.5181 32.4761 32.9639 32.2794 33.4548C32.0827 33.9457 31.9877 34.4713 32 35C31.9877 35.5287 32.0827 36.0543 32.2794 36.5452C32.4761 37.0361 32.7702 37.4819 33.1442 37.8559C33.5181 38.2298 33.9639 38.524 34.4548 38.7206C34.9457 38.9173 35.4713 39.0123 36 39C36.5287 39.0123 37.0543 38.9173 37.5452 38.7206C38.0361 38.524 38.4819 38.2298 38.8559 37.8559C39.2298 37.4819 39.524 37.0361 39.7206 36.5452C39.9173 36.0543 40.0123 35.5287 40 35C40.0123 34.4713 39.9173 33.9457 39.7206 33.4548C39.524 32.9639 39.2298 32.5181 38.8559 32.1442C38.4819 31.7702 38.0361 31.4761 37.5452 31.2794C37.0543 31.0827 36.5287 30.9877 36 31Z" fill="#F0EFF4"/>
+                                </svg>
+                                
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-table">
+                <ul class="responsive-table">
+                    <li class="table-header">
+                        <div class="col col-1">Дата</div>
+                        <div class="col col-2">Название образца</div>
+                        <div class="col col-3">ID</div>
+                        <div class="col col-4">Проект</div>
+                        <div class="col col-5"></div>
+                        <div class="col col-6"></div>
+                      </li>
+                    <li class="table-row">
+                        <div class="col col-1" data-label="Дата">25 фев 2024</div>
+                        <div class="col col-2" data-label="Название образца">Образец 1</div>
+                        <div class="col col-3" data-label="ID">12345</div>
+                        <div class="col col-4" data-label="Проект">Проект А</div>
+                        <div class="col col-5" data-label="ID"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.75 16.25V22.5C23.75 23.1875 23.1875 23.75 22.5 23.75H7.5C6.8125 23.75 6.25 23.1875 6.25 22.5V16.25C6.25 15.5625 5.6875 15 5 15C4.3125 15 3.75 15.5625 3.75 16.25V23.75C3.75 25.125 4.875 26.25 6.25 26.25H23.75C25.125 26.25 26.25 25.125 26.25 23.75V16.25C26.25 15.5625 25.6875 15 25 15C24.3125 15 23.75 15.5625 23.75 16.25ZM16.25 15.8375L18.6 13.4875C18.7157 13.3718 18.8531 13.28 19.0043 13.2173C19.1555 13.1547 19.3176 13.1225 19.4812 13.1225C19.6449 13.1225 19.807 13.1547 19.9582 13.2173C20.1094 13.28 20.2468 13.3718 20.3625 13.4875C20.4782 13.6032 20.57 13.7406 20.6327 13.8918C20.6953 14.043 20.7275 14.2051 20.7275 14.3687C20.7275 14.5324 20.6953 14.6945 20.6327 14.8457C20.57 14.9969 20.4782 15.1343 20.3625 15.25L15.875 19.7375C15.7594 19.8534 15.622 19.9453 15.4708 20.008C15.3196 20.0708 15.1575 20.1031 14.9937 20.1031C14.83 20.1031 14.6679 20.0708 14.5167 20.008C14.3655 19.9453 14.2281 19.8534 14.1125 19.7375L9.625 15.25C9.39128 15.0163 9.25997 14.6993 9.25997 14.3687C9.25997 14.0382 9.39128 13.7212 9.625 13.4875C9.85872 13.2538 10.1757 13.1225 10.5062 13.1225C10.8368 13.1225 11.1538 13.2538 11.3875 13.4875L13.75 15.8375V5C13.75 4.3125 14.3125 3.75 15 3.75C15.6875 3.75 16.25 4.3125 16.25 5V15.8375Z" fill="#F0EFF4"/>
+                            </svg>
+                            </div>
+                        <div class="col col-6" data-label="Проект"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.6875 11.25H22.0312C22.6529 11.25 23.249 11.4969 23.6885 11.9365C24.1281 12.376 24.375 12.9721 24.375 13.5938V24.8438C24.375 25.4654 24.1281 26.0615 23.6885 26.501C23.249 26.9406 22.6529 27.1875 22.0312 27.1875H7.96875C7.34715 27.1875 6.75101 26.9406 6.31147 26.501C5.87193 26.0615 5.625 25.4654 5.625 24.8438V13.5938C5.625 12.9721 5.87193 12.376 6.31147 11.9365C6.75101 11.4969 7.34715 11.25 7.96875 11.25H10.3125M19.6875 7.5L15 2.8125M15 2.8125L10.3125 7.5M15 2.8125V18.8086" stroke="#F0EFF4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </div>
+                    </li>
+                    <li class="table-row">
+                        <div class="col col-1" data-label="Дата">10 мар 2024</div>
+                        <div class="col col-2" data-label="Название образца">Образец 2</div>
+                        <div class="col col-3" data-label="ID">23456</div>
+                        <div class="col col-4" data-label="Проект">Проект Б</div>
+                        <div class="col col-5" data-label="ID"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.75 16.25V22.5C23.75 23.1875 23.1875 23.75 22.5 23.75H7.5C6.8125 23.75 6.25 23.1875 6.25 22.5V16.25C6.25 15.5625 5.6875 15 5 15C4.3125 15 3.75 15.5625 3.75 16.25V23.75C3.75 25.125 4.875 26.25 6.25 26.25H23.75C25.125 26.25 26.25 25.125 26.25 23.75V16.25C26.25 15.5625 25.6875 15 25 15C24.3125 15 23.75 15.5625 23.75 16.25ZM16.25 15.8375L18.6 13.4875C18.7157 13.3718 18.8531 13.28 19.0043 13.2173C19.1555 13.1547 19.3176 13.1225 19.4812 13.1225C19.6449 13.1225 19.807 13.1547 19.9582 13.2173C20.1094 13.28 20.2468 13.3718 20.3625 13.4875C20.4782 13.6032 20.57 13.7406 20.6327 13.8918C20.6953 14.043 20.7275 14.2051 20.7275 14.3687C20.7275 14.5324 20.6953 14.6945 20.6327 14.8457C20.57 14.9969 20.4782 15.1343 20.3625 15.25L15.875 19.7375C15.7594 19.8534 15.622 19.9453 15.4708 20.008C15.3196 20.0708 15.1575 20.1031 14.9937 20.1031C14.83 20.1031 14.6679 20.0708 14.5167 20.008C14.3655 19.9453 14.2281 19.8534 14.1125 19.7375L9.625 15.25C9.39128 15.0163 9.25997 14.6993 9.25997 14.3687C9.25997 14.0382 9.39128 13.7212 9.625 13.4875C9.85872 13.2538 10.1757 13.1225 10.5062 13.1225C10.8368 13.1225 11.1538 13.2538 11.3875 13.4875L13.75 15.8375V5C13.75 4.3125 14.3125 3.75 15 3.75C15.6875 3.75 16.25 4.3125 16.25 5V15.8375Z" fill="#F0EFF4"/>
+                            </svg>
+                            </div>
+                        <div class="col col-6" data-label="Проект"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.6875 11.25H22.0312C22.6529 11.25 23.249 11.4969 23.6885 11.9365C24.1281 12.376 24.375 12.9721 24.375 13.5938V24.8438C24.375 25.4654 24.1281 26.0615 23.6885 26.501C23.249 26.9406 22.6529 27.1875 22.0312 27.1875H7.96875C7.34715 27.1875 6.75101 26.9406 6.31147 26.501C5.87193 26.0615 5.625 25.4654 5.625 24.8438V13.5938C5.625 12.9721 5.87193 12.376 6.31147 11.9365C6.75101 11.4969 7.34715 11.25 7.96875 11.25H10.3125M19.6875 7.5L15 2.8125M15 2.8125L10.3125 7.5M15 2.8125V18.8086" stroke="#F0EFF4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </div>
+                    </li>
+                    <li class="table-row">
+                        <div class="col col-1" data-label="Дата">15 апр 2024</div>
+                        <div class="col col-2" data-label="Название образца">Образец 3</div>
+                        <div class="col col-3" data-label="ID">34567</div>
+                        <div class="col col-4" data-label="Проект">Проект В</div>
+                        <div class="col col-5" data-label="ID"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.75 16.25V22.5C23.75 23.1875 23.1875 23.75 22.5 23.75H7.5C6.8125 23.75 6.25 23.1875 6.25 22.5V16.25C6.25 15.5625 5.6875 15 5 15C4.3125 15 3.75 15.5625 3.75 16.25V23.75C3.75 25.125 4.875 26.25 6.25 26.25H23.75C25.125 26.25 26.25 25.125 26.25 23.75V16.25C26.25 15.5625 25.6875 15 25 15C24.3125 15 23.75 15.5625 23.75 16.25ZM16.25 15.8375L18.6 13.4875C18.7157 13.3718 18.8531 13.28 19.0043 13.2173C19.1555 13.1547 19.3176 13.1225 19.4812 13.1225C19.6449 13.1225 19.807 13.1547 19.9582 13.2173C20.1094 13.28 20.2468 13.3718 20.3625 13.4875C20.4782 13.6032 20.57 13.7406 20.6327 13.8918C20.6953 14.043 20.7275 14.2051 20.7275 14.3687C20.7275 14.5324 20.6953 14.6945 20.6327 14.8457C20.57 14.9969 20.4782 15.1343 20.3625 15.25L15.875 19.7375C15.7594 19.8534 15.622 19.9453 15.4708 20.008C15.3196 20.0708 15.1575 20.1031 14.9937 20.1031C14.83 20.1031 14.6679 20.0708 14.5167 20.008C14.3655 19.9453 14.2281 19.8534 14.1125 19.7375L9.625 15.25C9.39128 15.0163 9.25997 14.6993 9.25997 14.3687C9.25997 14.0382 9.39128 13.7212 9.625 13.4875C9.85872 13.2538 10.1757 13.1225 10.5062 13.1225C10.8368 13.1225 11.1538 13.2538 11.3875 13.4875L13.75 15.8375V5C13.75 4.3125 14.3125 3.75 15 3.75C15.6875 3.75 16.25 4.3125 16.25 5V15.8375Z" fill="#F0EFF4"/>
+                            </svg>
+                            </div>
+                        <div class="col col-6" data-label="Проект"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.6875 11.25H22.0312C22.6529 11.25 23.249 11.4969 23.6885 11.9365C24.1281 12.376 24.375 12.9721 24.375 13.5938V24.8438C24.375 25.4654 24.1281 26.0615 23.6885 26.501C23.249 26.9406 22.6529 27.1875 22.0312 27.1875H7.96875C7.34715 27.1875 6.75101 26.9406 6.31147 26.501C5.87193 26.0615 5.625 25.4654 5.625 24.8438V13.5938C5.625 12.9721 5.87193 12.376 6.31147 11.9365C6.75101 11.4969 7.34715 11.25 7.96875 11.25H10.3125M19.6875 7.5L15 2.8125M15 2.8125L10.3125 7.5M15 2.8125V18.8086" stroke="#F0EFF4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </div>
+                    </li>
+                    <li class="table-row">
+                        <div class="col col-1" data-label="Дата">20 май 2024</div>
+                        <div class="col col-2" data-label="Название образца">Образец 4</div>
+                        <div class="col col-3" data-label="ID">45678</div>
+                        <div class="col col-4" data-label="Проект">Проект Г</div>
+                        <div class="col col-5" data-label="ID"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.75 16.25V22.5C23.75 23.1875 23.1875 23.75 22.5 23.75H7.5C6.8125 23.75 6.25 23.1875 6.25 22.5V16.25C6.25 15.5625 5.6875 15 5 15C4.3125 15 3.75 15.5625 3.75 16.25V23.75C3.75 25.125 4.875 26.25 6.25 26.25H23.75C25.125 26.25 26.25 25.125 26.25 23.75V16.25C26.25 15.5625 25.6875 15 25 15C24.3125 15 23.75 15.5625 23.75 16.25ZM16.25 15.8375L18.6 13.4875C18.7157 13.3718 18.8531 13.28 19.0043 13.2173C19.1555 13.1547 19.3176 13.1225 19.4812 13.1225C19.6449 13.1225 19.807 13.1547 19.9582 13.2173C20.1094 13.28 20.2468 13.3718 20.3625 13.4875C20.4782 13.6032 20.57 13.7406 20.6327 13.8918C20.6953 14.043 20.7275 14.2051 20.7275 14.3687C20.7275 14.5324 20.6953 14.6945 20.6327 14.8457C20.57 14.9969 20.4782 15.1343 20.3625 15.25L15.875 19.7375C15.7594 19.8534 15.622 19.9453 15.4708 20.008C15.3196 20.0708 15.1575 20.1031 14.9937 20.1031C14.83 20.1031 14.6679 20.0708 14.5167 20.008C14.3655 19.9453 14.2281 19.8534 14.1125 19.7375L9.625 15.25C9.39128 15.0163 9.25997 14.6993 9.25997 14.3687C9.25997 14.0382 9.39128 13.7212 9.625 13.4875C9.85872 13.2538 10.1757 13.1225 10.5062 13.1225C10.8368 13.1225 11.1538 13.2538 11.3875 13.4875L13.75 15.8375V5C13.75 4.3125 14.3125 3.75 15 3.75C15.6875 3.75 16.25 4.3125 16.25 5V15.8375Z" fill="#F0EFF4"/>
+                            </svg>
+                            </div>
+                        <div class="col col-6" data-label="Проект"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.6875 11.25H22.0312C22.6529 11.25 23.249 11.4969 23.6885 11.9365C24.1281 12.376 24.375 12.9721 24.375 13.5938V24.8438C24.375 25.4654 24.1281 26.0615 23.6885 26.501C23.249 26.9406 22.6529 27.1875 22.0312 27.1875H7.96875C7.34715 27.1875 6.75101 26.9406 6.31147 26.501C5.87193 26.0615 5.625 25.4654 5.625 24.8438V13.5938C5.625 12.9721 5.87193 12.376 6.31147 11.9365C6.75101 11.4969 7.34715 11.25 7.96875 11.25H10.3125M19.6875 7.5L15 2.8125M15 2.8125L10.3125 7.5M15 2.8125V18.8086" stroke="#F0EFF4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </div>
+                    </li>
+                    <li class="table-row">
+                        <div class="col col-1" data-label="Дата">20 май 2024</div>
+                        <div class="col col-2" data-label="Название образца">Образец 4</div>
+                        <div class="col col-3" data-label="ID">45678</div>
+                        <div class="col col-4" data-label="Проект">Проект Г</div>
+                        <div class="col col-5" data-label="ID"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.75 16.25V22.5C23.75 23.1875 23.1875 23.75 22.5 23.75H7.5C6.8125 23.75 6.25 23.1875 6.25 22.5V16.25C6.25 15.5625 5.6875 15 5 15C4.3125 15 3.75 15.5625 3.75 16.25V23.75C3.75 25.125 4.875 26.25 6.25 26.25H23.75C25.125 26.25 26.25 25.125 26.25 23.75V16.25C26.25 15.5625 25.6875 15 25 15C24.3125 15 23.75 15.5625 23.75 16.25ZM16.25 15.8375L18.6 13.4875C18.7157 13.3718 18.8531 13.28 19.0043 13.2173C19.1555 13.1547 19.3176 13.1225 19.4812 13.1225C19.6449 13.1225 19.807 13.1547 19.9582 13.2173C20.1094 13.28 20.2468 13.3718 20.3625 13.4875C20.4782 13.6032 20.57 13.7406 20.6327 13.8918C20.6953 14.043 20.7275 14.2051 20.7275 14.3687C20.7275 14.5324 20.6953 14.6945 20.6327 14.8457C20.57 14.9969 20.4782 15.1343 20.3625 15.25L15.875 19.7375C15.7594 19.8534 15.622 19.9453 15.4708 20.008C15.3196 20.0708 15.1575 20.1031 14.9937 20.1031C14.83 20.1031 14.6679 20.0708 14.5167 20.008C14.3655 19.9453 14.2281 19.8534 14.1125 19.7375L9.625 15.25C9.39128 15.0163 9.25997 14.6993 9.25997 14.3687C9.25997 14.0382 9.39128 13.7212 9.625 13.4875C9.85872 13.2538 10.1757 13.1225 10.5062 13.1225C10.8368 13.1225 11.1538 13.2538 11.3875 13.4875L13.75 15.8375V5C13.75 4.3125 14.3125 3.75 15 3.75C15.6875 3.75 16.25 4.3125 16.25 5V15.8375Z" fill="#F0EFF4"/>
+                            </svg>
+                            </div>
+                        <div class="col col-6" data-label="Проект"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.6875 11.25H22.0312C22.6529 11.25 23.249 11.4969 23.6885 11.9365C24.1281 12.376 24.375 12.9721 24.375 13.5938V24.8438C24.375 25.4654 24.1281 26.0615 23.6885 26.501C23.249 26.9406 22.6529 27.1875 22.0312 27.1875H7.96875C7.34715 27.1875 6.75101 26.9406 6.31147 26.501C5.87193 26.0615 5.625 25.4654 5.625 24.8438V13.5938C5.625 12.9721 5.87193 12.376 6.31147 11.9365C6.75101 11.4969 7.34715 11.25 7.96875 11.25H10.3125M19.6875 7.5L15 2.8125M15 2.8125L10.3125 7.5M15 2.8125V18.8086" stroke="#F0EFF4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        <div class="my-projects-section">
+            <div class="my-project-btns">
+                <div class="my-projects-btns-title">
+                    Мои проекты
+                </div>
+            </div>
+            <div class="my-project-tiles-project">
+                
+            </div>
+          </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Красивая таблица</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    body {
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 50px;
+  background-color: #12130F;
+  padding-bottom: 2rem;
+  border-radius: 50px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+.btn:hover {
+  background-color: #5f6061;
+  border-radius: 5px;
+}
+
+.responsive-table {
+  li {
+    border-radius: 50px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: azure;
+    text-align: center;
+  }
+  .table-header {
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: bold;
+  }
+  .table-row {
+    background-color: #323435;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+  }
+  .table-row:hover {
+    background-color: #404649;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+  .col-1 {
+    flex-basis: 8%;
+  }
+  .col-2 {
+    flex-basis: 40%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 25%;
+  }
+  .col-5 {
+    flex-basis: 5%;
+  }
+  .col-6 {
+    flex-basis: 5%;
+  }
+  
+  @media all and (max-width: 767px) {
+    .table-header {
+      display: none;
+    }
+    li {
+      display: block;
+    }
+    .col {
+      
+      flex-basis: 100%;
+      
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  }
+}
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <ul class="responsive-table">
+            <li class="table-header">
+                <div class="col col-1">Дата</div>
+                <div class="col col-2">Название образца</div>
+                <div class="col col-3">ID</div>
+                <div class="col col-4">Проект</div>
+                <div class="col col-5"></div>
+                <div class="col col-6"></div>
+              </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Дата">25 фев 2024</div>
+                <div class="col col-2" data-label="Название образца">Образец 1</div>
+                <div class="col col-3" data-label="ID">12345</div>
+                <div class="col col-4" data-label="Проект">Проект А</div>
+                <div class="col col-5" data-label="ID"><svg class="btn" width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24"/>
+                  <path d="M5 12V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V12" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 3L12 15M12 15L16 11M12 15L8 11" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></div>
+                <div class="col col-6" data-label="Проект"><svg class="btn" width="31px" height="31px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 13L20 18C20 19.1046 19.1046 20 18 20L6 20C4.89543 20 4 19.1046 4 18L4 13" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 8L12 4M12 4L8 8M12 4L12 16" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Дата">10 мар 2024</div>
+                <div class="col col-2" data-label="Название образца">Образец 2</div>
+                <div class="col col-3" data-label="ID">23456</div>
+                <div class="col col-4" data-label="Проект">Проект Б</div>
+                <div class="col col-5" data-label="ID"><svg class="btn" width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24"/>
+                  <path d="M5 12V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V12" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 3L12 15M12 15L16 11M12 15L8 11" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></div>
+                <div class="col col-6" data-label="Проект"><svg class="btn" width="31px" height="31px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 13L20 18C20 19.1046 19.1046 20 18 20L6 20C4.89543 20 4 19.1046 4 18L4 13" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 8L12 4M12 4L8 8M12 4L12 16" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Дата">15 апр 2024</div>
+                <div class="col col-2" data-label="Название образца">Образец 3</div>
+                <div class="col col-3" data-label="ID">34567</div>
+                <div class="col col-4" data-label="Проект">Проект В</div>
+                <div class="col col-5" data-label="ID"><svg class="btn" width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24"/>
+                  <path d="M5 12V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V12" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 3L12 15M12 15L16 11M12 15L8 11" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></div>
+                <div class="col col-6" data-label="Проект"><svg class="btn" width="31px" height="31px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 13L20 18C20 19.1046 19.1046 20 18 20L6 20C4.89543 20 4 19.1046 4 18L4 13" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 8L12 4M12 4L8 8M12 4L12 16" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Дата">20 май 2024</div>
+                <div class="col col-2" data-label="Название образца">Образец 4</div>
+                <div class="col col-3" data-label="ID">45678</div>
+                <div class="col col-4" data-label="Проект">Проект Г</div>
+                <div class="col col-5" data-label="ID"><svg class="btn" width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24"/>
+                  <path d="M5 12V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V12" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 3L12 15M12 15L16 11M12 15L8 11" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></div>
+                <div class="col col-6" data-label="Проект"><svg class="btn" width="31px" height="31px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 13L20 18C20 19.1046 19.1046 20 18 20L6 20C4.89543 20 4 19.1046 4 18L4 13" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 8L12 4M12 4L8 8M12 4L12 16" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg></div>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
