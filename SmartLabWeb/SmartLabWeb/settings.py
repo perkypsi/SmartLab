@@ -37,10 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'employees.apps.EmployeesConfig',
-    'protocols.apps.ProtocolsConfig',
-    'projects.apps.ProjectsConfig',
-    'laboratories.apps.LaboratoriesConfig'
+    'ResourceInventory.apps.ResourceinventoryConfig',
+    'LabManagementProcess.apps.LabmanagementprocessConfig',
+    'AccessManagementSystem.apps.AccessmanagementsystemConfig'
 ]
 
 MIDDLEWARE = [
